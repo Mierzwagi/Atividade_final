@@ -3,3 +3,12 @@
 
 //Chama o Sequelize
 const Sequelize = require('sequelize')
+
+//Criando a instancia do sequelize e chama o banco
+const sequelize = new Sequelize("facul_db", "root", "root",{
+    //Dizer qual banco você esta utilizando 
+    dialect: "mysql"
+})
+
+//Exporta as configurações do banco
+module.exports = sequelize;
