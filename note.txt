@@ -3,17 +3,19 @@ CREATE DATABASE facul_db;
 
 USE facul_db;
 
-INSERT INTO departiments (nome, sigla, codigo, endereco, telefone) VALUES
-('Tecnologia da Informação', 'TI', 101, 'Rua da Tecnologia, 100', '(11) 1234-5678'),
-('Administração e Negócios', 'ADM', 102, 'Avenida dos Negócios, 200', '(11) 2345-6789'),
-('Ciências Jurídicas', 'CJ', 103, 'Praça da Justiça, 300', '(11) 3456-7890'),
-('Ciências da Saúde', 'CS', 104, 'Rua da Saúde, 400', '(11) 4567-8901'),
-('Ciências Biológicas', 'CB', 105, 'Avenida das Ciências, 500', '(11) 5678-9012'),
-('Engenharia', 'ENG', 106, 'Rua dos Engenheiros, 600', '(11) 6789-0123'),
-('Ciências Humanas', 'CH', 107, 'Praça das Humanidades, 700', '(11) 7890-1234'),
-('Arquitetura e Design', 'AD', 108, 'Avenida da Arquitetura, 800', '(11) 8901-2345'),
-('Ciências Exatas', 'CE', 109, 'Rua das Exatas, 900', '(11) 9012-3456'),
-('Artes e Comunicação', 'AC', 110, 'Avenida das Artes, 1000', '(11) 0123-4567');
+-- INSERT INTO departiments (nome, sigla, codigo, endereco, telefone) VALUES
+-- ('Tecnologia da Informação', 'TI', 101, 'Rua da Tecnologia, 100', '(11) 1234-5678'),
+-- ('Administração e Negócios', 'ADM', 102, 'Avenida dos Negócios, 200', '(11) 2345-6789'),
+-- ('Ciências Jurídicas', 'CJ', 103, 'Praça da Justiça, 300', '(11) 3456-7890'),
+-- ('Ciências da Saúde', 'CS', 104, 'Rua da Saúde, 400', '(11) 4567-8901'),
+-- ('Ciências Biológicas', 'CB', 105, 'Avenida das Ciências, 500', '(11) 5678-9012'),
+-- ('Engenharia', 'ENG', 106, 'Rua dos Engenheiros, 600', '(11) 6789-0123'),
+-- ('Ciências Humanas', 'CH', 107, 'Praça das Humanidades, 700', '(11) 7890-1234'),
+-- ('Arquitetura e Design', 'AD', 108, 'Avenida da Arquitetura, 800', '(11) 8901-2345'),
+-- ('Ciências Exatas', 'CE', 109, 'Rua das Exatas, 900', '(11) 9012-3456'),
+-- ('Artes e Comunicação', 'AC', 110, 'Avenida das Artes, 1000', '(11) 0123-4567');
+
+USE facul_db;
 
 INSERT INTO courses (nome, descricao, numero, cargaHoraria, cargaHorariaTotal, numeroSemestre, nivel, departamento) VALUES
 ('Engenharia de Software', 'Curso focado em desenvolvimento de software.', 101, 60, 480, 8, 'Graduação', 'Tecnologia da Informação'),
@@ -28,28 +30,28 @@ INSERT INTO courses (nome, descricao, numero, cargaHoraria, cargaHorariaTotal, n
 ('Química', 'Curso de química.', 110, 50, 400, 8, 'Graduação', 'Ciências Exatas');
 
 INSERT INTO disciplines (nome, codigo, descricao, cargaHoraria, teacher) VALUES
-('Algoritmos e Programação', 'CS101', 'Introdução a algoritmos e lógica de programação.', 60, 'Prof. João Silva'),
-('Estrutura de Dados', 'CS102', 'Estudo de estruturas de dados básicas.', 60, 'Prof. Maria Oliveira'),
-('Banco de Dados', 'CS103', 'Introdução a sistemas de banco de dados.', 60, 'Prof. Carlos Souza'),
-('Redes de Computadores', 'CS104', 'Fundamentos de redes de computadores.', 60, 'Prof. Ana Paula'),
-('Engenharia de Software', 'CS105', 'Princípios de engenharia de software.', 60, 'Prof. Bruno Lima'),
-('Gestão de Projetos', 'ADM101', 'Fundamentos de gestão de projetos.', 45, 'Prof. Fernanda Costa'),
-('Marketing Digital', 'ADM102', 'Introdução ao marketing digital.', 45, 'Prof. Ricardo Almeida'),
-('Direito Constitucional', 'LAW101', 'Estudo da constituição e dos direitos fundamentais.', 55, 'Prof. Rafael Mendes'),
-('Anatomia Humana', 'MED101', 'Estudo da anatomia do corpo humano.', 70, 'Prof. Patrícia Rodrigues'),
-('Biologia Molecular', 'BIO101', 'Fundamentos de biologia molecular.', 50, 'Prof. Lucas Ferreira');
+('Algoritmos e Programação', 'CS101', 'Introdução a algoritmos e lógica de programação.', 60, 'João Silva'),
+('Estrutura de Dados', 'CS102', 'Estudo de estruturas de dados básicas.', 60, 'Maria Oliveira'),
+('Banco de Dados', 'CS103', 'Introdução a sistemas de banco de dados.', 60, 'Carlos Souza'),
+('Redes de Computadores', 'CS104', 'Fundamentos de redes de computadores.', 60, 'Ana Paula'),
+('Engenharia de Software', 'CS105', 'Princípios de engenharia de software.', 60, 'Bruno Lima'),
+('Gestão de Projetos', 'ADM101', 'Fundamentos de gestão de projetos.', 45, 'Fernanda Costa'),
+('Marketing Digital', 'ADM102', 'Introdução ao marketing digital.', 45, 'Ricardo Almeida'),
+('Direito Constitucional', 'LAW101', 'Estudo da constituição e dos direitos fundamentais.', 55, 'Rafael Mendes'),
+('Anatomia Humana', 'MED101', 'Estudo da anatomia do corpo humano.', 70, 'Patrícia Rodrigues'),
+('Biologia Molecular', 'BIO101', 'Fundamentos de biologia molecular.', 50, 'Lucas Ferreira');
 
-INSERT INTO students (nome, numero, cpf, rg, endereco, telefone, email, dataNascimento, sexo) VALUES
-('Ana Silva', 1, '12345678901', 'MG123456', 'Rua A, 100', '(11) 1234-5678', 'ana.silva@example.com', '2000-01-15', 'F'),
-('Bruno Oliveira', 2, '23456789012', 'SP234567', 'Avenida B, 200', '(11) 2345-6789', 'bruno.oliveira@example.com', '1998-05-20', 'M'),
-('Carlos Souza', 3, '34567890123', 'RJ345678', 'Praça C, 300', '(11) 3456-7890', 'carlos.souza@example.com', '1995-10-30', 'M'),
-('Daniela Pereira', 4, '45678901234', 'BA456789', 'Rua D, 400', '(11) 4567-8901', 'daniela.pereira@example.com', '2002-07-25', 'F'),
-('Eduardo Lima', 5, '56789012345', 'RS567890', 'Avenida E, 500', '(11) 5678-9012', 'eduardo.lima@example.com', '1999-03-10', 'M'),
-('Fernanda Costa', 6, '67890123456', 'SC678901', 'Rua F, 600', '(11) 6789-0123', 'fernanda.costa@example.com', '2001-12-05', 'F'),
-('Gabriel Fernandes', 7, '78901234567', 'PR789012', 'Praça G, 700', '(11) 7890-1234', 'gabriel.fernandes@example.com', '2003-08-15', 'M'),
-('Helena Martins', 8, '89012345678', 'CE890123', 'Avenida H, 800', '(11) 8901-2345', 'helena.martins@example.com', '1997-06-20', 'F'),
-('Igor Santos', 9, '90123456789', 'PE901234', 'Rua I, 900', '(11) 9012-3456', 'igor.santos@example.com', '2000-11-30', 'M'),
-('Julia Almeida', 10, '01234567890', 'GO012345', 'Avenida J, 1000', '(11) 0123-4567', 'julia.almeida@example.com', '1996-04-25', 'F');
+INSERT INTO students (nome, numero, cpf, rg, endereco, telefone, email, dataNascimento, sexo, curso) VALUES
+('Ana Silva', 1, '12345678901', 'MG123456', 'Rua A, 100', '(11) 1234-5678', 'ana.silva@example.com', '2000-01-15', 'F', 1),
+('Bruno Oliveira', 2, '23456789012', 'SP234567', 'Avenida B, 200', '(11) 2345-6789', 'bruno.oliveira@example.com', '1998-05-20', 'M', 2),
+('Carlos Souza', 3, '34567890123', 'RJ345678', 'Praça C, 300', '(11) 3456-7890', 'carlos.souza@example.com', '1995-10-30', 'M', 3),
+('Daniela Pereira', 4, '45678901234', 'BA456789', 'Rua D, 400', '(11) 4567-8901', 'daniela.pereira@example.com', '2002-07-25', 'F', 4),
+('Eduardo Lima', 5, '56789012345', 'RS567890', 'Avenida E, 500', '(11) 5678-9012', 'eduardo.lima@example.com', '1999-03-10', 'M', 5),
+('Fernanda Costa', 6, '67890123456', 'SC678901', 'Rua F, 600', '(11) 6789-0123', 'fernanda.costa@example.com', '2001-12-05', 'F', 6),
+('Gabriel Fernandes', 7, '78901234567', 'PR789012', 'Praça G, 700', '(11) 7890-1234', 'gabriel.fernandes@example.com', '2003-08-15', 'M', 7),
+('Helena Martins', 8, '89012345678', 'CE890123', 'Avenida H, 800', '(11) 8901-2345', 'helena.martins@example.com', '1997-06-20', 'F', 8),
+('Igor Santos', 9, '90123456789', 'PE901234', 'Rua I, 900', '(11) 9012-3456', 'igor.santos@example.com', '2000-11-30', 'M', 9),
+('Julia Almeida', 10, '01234567890', 'GO012345', 'Avenida J, 1000', '(11) 0123-4567', 'julia.almeida@example.com', '1996-04-25', 'F', 10);
 
 INSERT INTO teachers (nome, cpf, endereco, email, departamento) VALUES
 ('João Silva', '12345678901', 'Rua A, 100', 'joao.silva@example.com', 'Computação'),
