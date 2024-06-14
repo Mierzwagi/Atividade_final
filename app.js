@@ -8,11 +8,13 @@ const Discipline = require("./models/discipline");
 const Department = require("./models/department");
 const Course = require("./models/course");
 
+const studentRoutes = require('./routes/studentRouter')
+
 //usar body parser
 app.use(bodyParser.json());
 app.use(express.json());
 
-app.use('/student', Student)
+app.use('/student', studentRoutes)
 
 //conectando com o db
 db.authenticate()
@@ -31,7 +33,7 @@ db.authenticate()
 //Um professor pertence apenas em um departamento
 Teacher.belongsTo(Course);
 //Um aluno pertence a um curso
-Student.belongsTo(Course);
+//Student.belongsTo(Course);
 //As diciplina pertence a um curso
 Discipline.belongsTo(Course);
 //E um curso tem várias diciplinas
