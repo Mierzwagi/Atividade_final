@@ -16,10 +16,10 @@ const Teacher = db.define("teacher", {
     },
     endereco: {
         type: Sequelize.STRING
-    },
+    }/* ,
     departamento: {
         type: Sequelize.STRING
-    }
+    } */
 
 })
 

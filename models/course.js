@@ -19,20 +19,20 @@ const Course = db.define("course", {
         type: Sequelize.INTEGER,
     },
     cargaHorariaSemestre: {
-        type: Sequelize.STRING,
+        type: Sequelize.INTEGER,
     },
     cargaHorariaTotal: {
-        type: Sequelize.STRING
+        type: Sequelize.INTEGER
     },
     numeroSemestre: {
-        type: Sequelize.STRING
+        type: Sequelize.INTEGER
     },
     nivel: {
         type: Sequelize.STRING
-    },
+    }/* ,
     departamento: {
         type: Sequelize.STRING
-    }
+    } */
 
 })
 

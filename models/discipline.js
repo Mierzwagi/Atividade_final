@@ -18,7 +18,7 @@ const Discipline = db.define("discipline", {
         type: Sequelize.STRING,
     },
     cargaHoraria: {
-        type: Sequelize.STRING
+        type: Sequelize.INTEGER
     },
     teacher: {
         type: Sequelize.STRING

@@ -12,6 +12,8 @@ const Course = require("./models/course");
 app.use(bodyParser.json());
 app.use(express.json());
 
+app.use('/student', Student)
+
 //conectando com o db
 db.authenticate()
   .then(() => {
@@ -23,11 +25,11 @@ db.authenticate()
 
 //Ralacionando as tabelas
 //Um curso pertence a um departamento
-Course.belongsTo(Department);
+/* Course.belongsTo(Department); */
 //Um departamento tem varios cursos e professores
-Department.hasMany(Course);
+/* Department.hasMany(Course); */
 //Um professor pertence apenas em um departamento
-Teacher.belongsTo(Department);
+Teacher.belongsTo(Course);
 //Um aluno pertence a um curso
 Student.belongsTo(Course);
 //As diciplina pertence a um curso
